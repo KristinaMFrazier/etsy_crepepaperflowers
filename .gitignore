@@ -1,6 +1,11 @@
+SQLSetUp.ipynb
 csv
-dataview.ipynb
-dataview_tocsv.ipynb
+all_etsy_listings.csv
 archive
-.ipynb_checkpoints/
+dataview_exploratory.ipynb
+cleandata_working.ipynb
+dataview_tocsv_fail.ipynb
+cleanlistingdata_fail.ipynb
+joindata_success.ipynb
 .DS_Store
+.ipynb_checkpoints
