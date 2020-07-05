@@ -5,8 +5,6 @@ import time
 
 api_key = 'pcc1kj6mkrn2h59psstbf26s'
 
-# attempt value isn't updating??
-
 def get_data():
     attempt = 1
     while attempt <= 5:
@@ -19,7 +17,7 @@ def get_data():
         # Convert JSON to dataframe to CSV output
         data = r.json()
         df = pd.DataFrame(data['results'])
-        df.to_csv(path_or_buf='csv/etsylistings_20201106_{}.csv'.format(attempt))
+        df.to_csv(path_or_buf='csv/etsylistings_20200507_{}.csv'.format(attempt))
         print("Attempt number {} succesful.".format(attempt))
 
         # Wait for 1 second

@@ -25,4 +25,4 @@ csv_files = filenames[1:-1]
 combined_csv = pd.concat([pd.read_csv(f) for f in csv_files])
 
 # export to a single CSV file
-combined_csv.to_csv( "/Users/kristinafrazier/documents/projects/etsy/data/csv/all_etsy_listings.csv", index=False )
+combined_csv.to_csv( "/Users/kristinafrazier/documents/projects/etsy/data/csv/all_etsy_listings_raw.csv", index=False )

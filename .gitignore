@@ -3,7 +3,7 @@ csv
 all_etsy_listings.csv
 archive
 dataview_exploratory.ipynb
-cleandata_working.ipynb
+cleandata_success.ipynb
 dataview_tocsv_fail.ipynb
 cleanlistingdata_fail.ipynb
 joindata_success.ipynb
