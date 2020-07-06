@@ -1,9 +1,11 @@
 # load all data into a data frame
 import numpy as np
 import pandas as pd
-from ast import literal_eval
 
-data = pd.read_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv/all_etsy_listings_raw.csv")
+full_dataset = "/Users/kristinafrazier/documents/projects/etsy/data/csv/all_etsy_listings_raw.csv"
+
+converters = {"tags": lambda x: x.strip("[]").replace("'","").split(", "),"materials": lambda x: x.strip("[]").replace("'","").split(", ")}
+data = pd.read_csv(full_dataset, converters = converters)
 
 df = pd.DataFrame(data)
 
@@ -20,10 +22,10 @@ most_data_export.to_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv
 
 # load tag data from csv into a dataframe
 # use converters for read_csv to load columns as specific data types or objects
-tag_data = pd.read_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv/all_etsy_listings_raw.csv",converters = {'tags':eval})
+# tag_data = pd.read_csv(filepath_or_buffer = full_dataset,converters=tag_converter)
 
 # select only listing_id and tag columns
-tag_data_df = pd.DataFrame(tag_data[['listing_id','tags']]).set_index('listing_id')
+tag_data_df = pd.DataFrame(data[['listing_id','tags']]).set_index('listing_id')
 
 # explode tags and create a new dataframe
 explode_tags = tag_data_df.explode('tags')
@@ -33,11 +35,11 @@ tag_data_exploded = pd.DataFrame(explode_tags)
 tag_data_exploded.to_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv/all_tag_data_clean.csv")
 
 # load materials data from csv into a dataframe
-materials_data = pd.read_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv/all_etsy_listings_raw.csv",converters = {'materials':eval})
+# materials_data = pd.read_csv(filepath_or_buffer = full_dataset,converters = {"materials": literal_eval})
 
 
 # select only listing_id and materials columns
-materials_data_df = pd.DataFrame(materials_data[['listing_id','materials']]).set_index('listing_id')
+materials_data_df = pd.DataFrame(data[['listing_id','materials']]).set_index('listing_id')
 
 # explode materials and create a new dataframe
 explode_materials = materials_data_df.explode('materials')

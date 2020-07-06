@@ -7,7 +7,7 @@ api_key = 'pcc1kj6mkrn2h59psstbf26s'
 
 def get_data():
     attempt = 1
-    while attempt <= 5:
+    while attempt <= 100:
         # Pull data from API
         r = requests.get('https://openapi.etsy.com/v2/listings/active?api_key={}&limit=100&offset={}'.format(api_key,((attempt-1)*100)))
 

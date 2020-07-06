@@ -4,8 +4,10 @@ all_etsy_listings.csv
 archive
 dataview_exploratory.ipynb
 cleandata_success.ipynb
+cleandata_collumntolist_success.ipynb
 dataview_tocsv_fail.ipynb
 cleanlistingdata_fail.ipynb
 joindata_success.ipynb
 .DS_Store
 .ipynb_checkpoints
+__pycache__/
