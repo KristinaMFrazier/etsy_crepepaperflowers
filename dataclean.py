@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 
-full_dataset = "/Users/kristinafrazier/documents/projects/etsy/data/csv/all_etsy_listings_raw.csv"
+full_dataset = "/Users/kristinafrazier/documents/projects/etsy/data/csv_pf/all_etsy_listings_raw.csv"
 
 converters = {"tags": lambda x: x.strip("[]").replace("'","").split(", "),"materials": lambda x: x.strip("[]").replace("'","").split(", ")}
 data = pd.read_csv(full_dataset, converters = converters)
@@ -18,7 +18,7 @@ set_index = most_data.set_index('listing_id')
 most_data_export = pd.DataFrame(set_index)
 
 # write data to a csv file
-most_data_export.to_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv/all_main_data_clean.csv")
+most_data_export.to_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv_pf/all_main_data_clean.csv")
 
 # load tag data from csv into a dataframe
 # use converters for read_csv to load columns as specific data types or objects
@@ -32,7 +32,7 @@ explode_tags = tag_data_df.explode('tags')
 tag_data_exploded = pd.DataFrame(explode_tags)
 
 # write tag data to a csv file
-tag_data_exploded.to_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv/all_tag_data_clean.csv")
+tag_data_exploded.to_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv_pf/all_tag_data_clean.csv")
 
 # load materials data from csv into a dataframe
 # materials_data = pd.read_csv(filepath_or_buffer = full_dataset,converters = {"materials": literal_eval})
@@ -46,4 +46,4 @@ explode_materials = materials_data_df.explode('materials')
 materials_data_exploded = pd.DataFrame(explode_materials)
 
 # write materials data to a csv file
-materials_data_exploded.to_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv/all_materials_data_clean.csv")
+materials_data_exploded.to_csv("/Users/kristinafrazier/documents/projects/etsy/data/csv_pf/all_materials_data_clean.csv")
