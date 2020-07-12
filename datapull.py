@@ -5,11 +5,15 @@ import pandas as pd
 import time
 from datetime import date
 
-api_key = 'pcc1kj6mkrn2h59psstbf26s'
+key = open('apikey.txt', 'r')
+
+api_key = key.read()
+
+key.close()
 
 def get_data():
     attempt = 1
-    while attempt <= 200:
+    while attempt <= 1:
         # Pull data from API
         r = requests.get('https://openapi.etsy.com/v2/listings/active?api_key={}&limit=100&offset={}&materials=”crepe paper”'.format(api_key,((attempt-1)*100)))
 
