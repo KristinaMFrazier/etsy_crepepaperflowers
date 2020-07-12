@@ -1,11 +1,12 @@
 # Etsy Crepe Paper Flower Products Market Analysis
-### *Market analysis of crepe paper flower products to maximize sales for the CrepeFloret shop*
 
 **PROJECT PURPOSE**
+
 The purpose of this project is to extract listings for crepe paper flower products from Etsy.com to maximize sales for the CrepeFloret shop.
 
 **METHODOLOGY**
-This set of Python and SQL code includes a series of scripts to extract, compile, and clean a subset of Etsy listing data related to crepe paper flower products. Etsy listing data can only be extracted at a maximum of 100 records at a time. Python is needed to compile the data into one dataset, and to create additional tables related by each listing's listing_id column.
+
+This set of Python and SQL code includes a series of scripts to extract, compile, and clean a subset of Etsy listing data related to crepe paper flower products. Etsy listing data can only be extracted at a maximum of 100 records at a time. Python is needed to compile the data into one dataset, and to create additional tables related by each listing's listing_id column. SQL is needed to explore the data.
 
 *Use Python to extract, combine, and clean Etsy listing data*
 
@@ -18,15 +19,19 @@ This master script executes the following scripts:
 4. [dataclean_desctext.py](https://github.com/KristinaMFrazier/etsy_crepepaperflowers/blob/pflistings/dataclean_desctext.py): Additional table creation of each word used in the description of a listing.
 
 *Design PostgreSQL data table model*
-A database and schema was designed and deployed to store CSV outputs for SQL analysis. The analysis requires one data table where each row corresponds to one listing and includes several columns of attribute data for each listings, which is created by dataclean.py. Additionally, both dataclean.py and dataclean_desctext.py create additional data tables for each tag, material, of description word per listing id. All tables can be joined for analysis using a common listing_id field.
+
+A database and schema was designed and deployed to store csv outputs for SQL analysis. The analysis requires one data table where each row corresponds to one listing and includes several columns of attribute data for each listing, which is created by dataclean.py. Additionally, both dataclean.py and dataclean_desctext.py create additional data tables for each tag, material, of description word per listing_id. All tables can be joined for analysis using a common listing_id field.
 
 *Upload CSV files to PostgreSQL schema*
-The csv outputs of these scripts, as well as an additional CSV of a list of flowers, are then uploaded to PostgreSQL through SQL Shell. Each SQL upload script is stored [in this file.](https://github.com/KristinaMFrazier/etsy_crepepaperflowers/blob/pflistings/importdata_pf.sql)
+
+The csv outputs of these scripts, as well as an additional csv of a list of flowers, are then uploaded to PostgreSQL through SQL Shell. Each SQL upload script is stored [in this file.](https://github.com/KristinaMFrazier/etsy_crepepaperflowers/blob/pflistings/importdata_pf.sql)
 
 *Use SQL commands to extract insights*
+
 A [series of SQL commands](https://github.com/KristinaMFrazier/etsy_crepepaperflowers/blob/pflistings/draftCPanalysis.sql) are used to answer questions related to understanding the crepe flower market on Etsy.
 
 **INSIGHTS**
+
 The SQL commands used to analyze the Etsy listing data resulted in the following helpful insights and findings that may help improve sales of CrepeFloret products:
 * The average price of a crepe paper flower bouquet sold in USD is approximately $58.
 * The top five most popular tags for crepe paper flower products are, in order of popularity:
