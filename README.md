@@ -2,7 +2,7 @@
 
 ## Project Purpose
 
-The purpose of this project is to extract listings for crepe paper flower products from Etsy.com to maximize sales for the CrepeFloret shop. CrepeFloret is a Etsy shop that sells faux flower arrangements made of crepe paper. Insights uncovered from an analysis of listing data from competing shops may result in a competitive edge for CrepeFloret.
+The purpose of this project is to extract listings for crepe paper flower products from Etsy.com to maximize sales for the CrepeFloret shop. CrepeFloret is an Etsy shop that sells faux flower arrangements made of crepe paper. Insights uncovered from an analysis of listing data from competing shops may result in a competitive edge for CrepeFloret.
 
 ## Methodology
 
