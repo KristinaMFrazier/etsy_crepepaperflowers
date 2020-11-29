@@ -19,7 +19,7 @@ for path, subdirs, files in os.walk(directory):
         filenames.append(pathlib.PurePath(path, name))
 
 # would like to find a better way to filter only csv files
-csv_files = filenames[1:-1]
+csv_files = filenames[1:]
 
 # append all of the csv files into one file: https://stackoverflow.com/questions/2512386/how-to-merge-200-csv-files-in-python
 combined_csv = pd.concat([pd.read_csv(f) for f in csv_files])
