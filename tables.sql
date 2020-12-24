@@ -25,7 +25,7 @@ ALTER TABLE public.listings_main_12232020
     OWNER to postgres;
 
 -- IMPORT LISTINGS_MAIN
-\copy listings_main_11282020 (listing_id,user_id,title,description,price,currency_code,quantity,url,views,num_favorers,who_made,when_made,recipient,occasion,is_vintage) from '/Users/kristinafrazier/documents/projects/etsy/data/nov_2020/listings_main.csv' delimiter ',' csv header;
+\copy listings_main_12232020 (listing_id,user_id,title,description,price,currency_code,quantity,url,views,num_favorers,who_made,when_made,recipient,occasion,is_vintage) from '/Users/kristinafrazier/documents/projects/etsy/data/nov_2020/listings_main.csv' delimiter ',' csv header;
 
 --------------------------------------------------------------------------------
 
